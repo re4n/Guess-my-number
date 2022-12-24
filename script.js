@@ -3,11 +3,9 @@
 let randomNumber = Math.trunc(Math.random() * 20) + 1;
 let scoreNumber = 20;
 let points = 0;
-console.log(randomNumber);
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  console.log(guess, typeof guess);
 
   Number((document.querySelector('.number').textContent = guess));
 
@@ -19,7 +17,7 @@ document.querySelector('.check').addEventListener('click', function () {
     // when player wins
   } else if (guess === randomNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
-    document.body.style.backgroundColor = '#cbe86b';
+    document.body.style.backgroundColor = '#77ab59';
     Number((document.querySelector('.number').textContent = guess));
 
     if (scoreNumber > points) {
@@ -62,7 +60,6 @@ document.querySelector('.check').addEventListener('click', function () {
 document.querySelector('.again').addEventListener('click', function () {
   randomNumber = Math.trunc(Math.random() * 20) + 1;
   scoreNumber = 20;
-  console.log(randomNumber);
 
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = 20;
